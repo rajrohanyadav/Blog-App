@@ -6,7 +6,7 @@
 <ol>
 <li>Clone the repository to your desktop.</li>
 <li>Run <code>npm install</code> to install all the dependencies.</li>
-<li>Make sure you have mongo demon running i.e. run <code>./mongod</code> command.</li>
+<li>Make sure you have mongo daemon running i.e. run <code>./mongod</code> command.</li>
 </ol>
 
 # License
