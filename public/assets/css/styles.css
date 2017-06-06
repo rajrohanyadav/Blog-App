@@ -1,0 +1,24 @@
+form > p > a {
+  color: violet;
+}
+
+.extra > form {
+  display: inline;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.ui.menu .item img.logo {
+  margin-right: 1.2em;
+}
+
+.main.container {
+  margin-top: 6.0em;
+}
+
+.ui.footer.segment {
+  margin: 5em 0em 0em;
+  padding: 3em 0em 2.5em 0em;
+}

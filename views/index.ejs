@@ -1,0 +1,64 @@
+<% include partials/header %>
+  <div class="ui two column centered grid">
+    <div class="computer only column">
+      <div class="ui main container">
+        <div class="ui container segment raised">
+          <h1>Showing all posts</h1>
+          <div class="ui items divided">
+            <% blogs.forEach(function(blog){ %>
+            <div class="item">
+              <div class="image">
+                <img class="ui rounded image" src="<%= blog.image %>">
+              </div>
+              <div class="content">
+                <a href="/blogs/<%= blog._id %>" class="header"><%= blog.title %></a>
+                <div class="meta">
+                  <span><%= blog.date.toDateString() %></span>
+                </div>
+                <div class="description">
+                  <p><%- blog.body.substring(0,100) %>...</p>
+                </div>
+                <div class="extra">
+                  <a href="/blogs/<%= blog._id %>/edit" class="ui button violet basic">Edit</a>
+                  <a href="/blogs/<%= blog._id %>" class="ui button orange basic">Read More</a>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui centered grid">
+    <div class="tablet mobile only column">
+      <div class="ui container">
+        <h1>Showing all posts</h1>
+        <div class="ui container segment raised">
+          <div class="ui items divided">
+            <% blogs.forEach(function(blog){ %>
+            <div class="item">
+              <div class="image">
+                <img class="ui rounded image" src="<%= blog.image %>">
+              </div>
+              <div class="content">
+                <a href="/blogs/<%= blog._id %>" class="header"><%= blog.title %></a>
+                <div class="meta">
+                  <span><%= blog.date.toDateString() %></span>
+                </div>
+                <div class="description">
+                  <p><%= blog.body %></p>
+                </div>
+                <div class="extra">
+                  <a href="/blogs/<%= blog._id %>/edit" class="ui button violet basic">Edit</a>
+                  <a href="/blogs/<%= blog._id %>" class="ui button orange basic">Read More</a>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% include partials/footer %>
