@@ -29,4 +29,34 @@
       </div>
     </div>
   </div>
+  <div class="ui centered grid">
+    <div class="tablet mobile only column">
+      <div class="ui main container">
+        <div class="ui container segment raised">
+          <h1><%= blog.title %></h1>
+          <div class="ui item">
+            <div class="item">
+              <div class="image">
+                <img class="ui image rounded" src="<%= blog.image %>">
+              </div>
+              <div class="content">
+                <div class="meta">
+                  <span><%= blog.date.toDateString() %></span>
+                </div>
+                <div class="description">
+                  <p><%- blog.body %></p>
+                </div>
+                <div class="extra">
+                  <a href="/blogs/<%= blog._id %>/edit" class="ui button violet basic">Edit</a>
+                  <form class="ui form" action="/blogs/<%= blog._id %>?_method=DELETE" method="post">
+                    <button class="ui button red basic" type="submit" name="button">Delete Post</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <% include partials/footer %>

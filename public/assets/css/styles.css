@@ -22,3 +22,8 @@ body {
   margin: 5em 0em 0em;
   padding: 3em 0em 2.5em 0em;
 }
+
+img.image {
+  width: 100%;
+  height: 100%;
+}
