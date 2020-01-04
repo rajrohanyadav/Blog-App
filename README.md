@@ -8,6 +8,3 @@
 <li>Run <code>npm install</code> to install all the dependencies.</li>
 <li>Make sure you have mongo daemon running i.e. run <code>./mongod</code> command.</li>
 </ol>
-
-# License
-No license conditions, anyone with any motive can use this app.
